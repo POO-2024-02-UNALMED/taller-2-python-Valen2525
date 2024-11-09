@@ -8,8 +8,12 @@ class Auto:
         self.motor = motor
         self.registro = registro
 
-    def cantidadAsientos(self):
-        return len(self.asientos)
+    def cantidadAsientos(self, cantidadAsientos):
+        cantidadAsientos = 0
+        for x in range (len(self.asientos)):
+            if Asiento[x] != None:
+                cantidadAsientos += 1
+        return cantidadAsientos
 
     def verificarIntegridad(self):
         if self.registro != Motor.registro:
